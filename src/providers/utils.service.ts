@@ -1,5 +1,5 @@
 import * as _ from 'lodash';
-import { isArray } from 'radash';
+import { isArray } from 'lodash';
 
 export class UtilsService {
     /**

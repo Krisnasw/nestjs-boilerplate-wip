@@ -1,8 +1,8 @@
 import { CallHandler, ExecutionContext, Injectable, NestInterceptor } from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { RequestContext } from '@medibloc/nestjs-request-context';
-import { ConfigService } from '../services/config.service';
 import { AbstractRequestContext } from '../common/contexts/AbstractRequestContext';
+import { ConfigService } from '@/shared/services/config.service';
 
 @Injectable()
 export class ContextRequestInterceptor implements NestInterceptor {

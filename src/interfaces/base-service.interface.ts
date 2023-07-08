@@ -5,7 +5,7 @@ import { AbstractEntity } from '@/common/abstract.entity';
 import { AbstractDto } from '@/common/dto/abstract.dto';
 
 export interface BaseServiceInterface {
-    getAll(query: PaginateQuery): Promise<PaginationFormat<AbstractEntity>>;
+    getAll(query: PaginateQuery): Promise<PaginationFormat<AbstractEntity | AbstractDto>>;
 
     findOneById(id: string, option: FindQueryOption): Promise<AbstractEntity | AbstractDto>;
 
