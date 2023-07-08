@@ -1,0 +1,6 @@
+{
+    "NOT_FOUND": "Not Found",
+    "DELETE_FAILED": "Gagal menghapus data",
+    "FILE_NOT_EMPTY": "File tidak boleh kosong",
+    "FILE_ONLY_EXCEL": "Hanya menerima extensi xlsx, xls"
+}

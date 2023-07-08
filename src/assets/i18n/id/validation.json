@@ -1,0 +1,15 @@
+{
+    "NOT_EMPTY": "{property} cannot be empty",
+    "INVALID_EMAIL": "email is invalid",
+    "INVALID_BOOLEAN": "{property} is not a boolean",
+    "MIN": "{property} with value: \"{value}\" needs to be at least {constraints.0}, ow and {message}",
+    "MAX": "{property} with value: \"{value}\" needs to be less than {constraints.0}, ow and {message}",
+    "EMAIL_EXISTS": "email already exits",
+    "CONFIRM_PASSWORD_NOT_MATCH": "confirm password not match",
+    "INVALID_STRING": "{property} must be a string",
+    "INVALID_DATETIME": "{property} is not a valid date",
+    "IS_NUMBER": "{property} must be a number",
+    "IS_ENUM": "{property} must be a valid options",
+    "IS_STRING": "{property} must be a string",
+    "IS_ARRAY": "{property} must be an array"
+}
