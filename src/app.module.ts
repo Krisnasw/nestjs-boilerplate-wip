@@ -5,10 +5,11 @@ import { RequestContextModule } from '@medibloc/nestjs-request-context';
 import { AppService } from './app.service';
 import { AppController } from './app.controller';
 import { TerminusModule } from '@nestjs/terminus';
-import { UserGatewayModule } from './clients/users/user.module';
+import { EventEmitterModule } from '@nestjs/event-emitter';
 import { AbstractRequestContext } from './common/contexts/AbstractRequestContext';
 import { SharedModule } from './shared.module';
 import { ConfigService } from './shared/services/config.service';
+import { UserModule } from './modules/users/users.module';
 
 @Module({
     imports: [
@@ -27,8 +28,9 @@ import { ConfigService } from './shared/services/config.service';
             contextClass: AbstractRequestContext,
             isGlobal: true,
         }),
+        EventEmitterModule.forRoot(),
         TerminusModule,
-        UserGatewayModule,
+        UserModule,
     ],
     controllers: [AppController],
     providers: [AppService],

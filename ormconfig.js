@@ -13,17 +13,17 @@ for (const envName of Object.keys(process.env)) {
 }
 
 export const AppDataSource = new DataSource({
-    type: 'mysql',
-    host: process.env.MYSQL_HOST,
-    port: +process.env.MYSQL_PORT,
-    username: process.env.MYSQL_USERNAME,
-    password: process.env.MYSQL_PASSWORD,
-    database: process.env.MYSQL_DATABASE,
+    type: 'postgres',
+    host: process.env.DB_HOST,
+    port: +process.env.DB_PORT,
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE_NAME,
     namingStrategy: new SnakeNamingStrategy(),
     entities: ['src/modules/**/*.entity{.ts,.js}'],
     migrations: ['src/migrations/*{.ts,.js}'],
     cli: {
         migrationsDir: 'src/migrations',
     },
-    poolSize: process.env.MYSQL_CONNECTION_LIMIT,
+    poolSize: process.env.DB_CONNECTION_LIMIT,
 });
